@@ -1,4 +1,4 @@
-/* _printf - Custom printf Implementation */
+_printf - Custom printf Implementation
 
 Project Description:
 
