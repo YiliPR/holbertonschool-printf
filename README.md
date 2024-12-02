@@ -55,5 +55,3 @@ Known Issues:
 
 The function does not handle edge cases such as invalid format specifiers or extremely large numbers for binary conversion.
 This implementation does not support floating-point numbers or other advanced format specifiers that printf typically handles.
-
-

@@ -1,0 +1,87 @@
+.TH _PRINTF 3
+.SH NAME
+_printf \- formatted output conversion
+
+.SH SYNOPSIS
+.B #include "main.h"
+.BI "int _printf(const char *" format ", ...);"
+
+.SH DESCRIPTION
+The
+.B _printf
+function produces output according to a
+.B format
+string, using a variable number of arguments.
+
+The
+.B format
+string can include format specifiers that determine how subsequent arguments (or the format string itself) are converted for output. Text is copied directly to the output unless a format specifier is encountered.
+
+.SH FORMAT SPECIFIERS
+The following format specifiers are supported:
+
+.TP
+.B %c
+Prints a single character.
+
+.TP
+.B %s
+Prints a string of characters.
+
+.TP
+.B %%
+Prints a literal percent sign.
+
+.TP
+.B %d, %i
+Prints a signed decimal integer.
+
+.TP
+.B %u
+Prints an unsigned decimal integer.
+
+.TP
+.B %o
+Prints an unsigned octal integer.
+
+.TP
+.B %x, %X
+Prints an unsigned hexadecimal integer (lowercase or uppercase).
+
+.SH RETURN VALUE
+The
+.B _printf
+function returns the total number of characters written to the standard output (excluding the null byte used to end output to strings). If an output error occurs, a negative value is returned.
+
+.SH ERRORS
+.TP
+.B -1
+If an error occurs during processing, such as a null format string or a write error, the function returns \-1.
+
+.SH USAGE EXAMPLE
+.nf
+#include "main.h"
+
+int main(void)
+{
+    _printf("Character: %c\\n", 'A');
+    _printf("String: %s\\n", "Hello, world!");
+    _printf("Integer: %d\\n", 42);
+    return 0;
+}
+.fi
+
+Output:
+.nf
+Character: A
+String: Hello, world!
+Integer: 42
+.fi
+
+.SH SEE ALSO
+.BR printf (3),
+.BR fprintf (3),
+.BR sprintf (3)
+
+.SH AUTHOR
+Luis Feliciano, Eli Figueroa.
