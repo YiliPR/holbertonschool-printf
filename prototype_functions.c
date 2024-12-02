@@ -64,10 +64,10 @@ int percent_handler(const char *str, va_list list, int *i)
 	else if (str[*i] == 's')
 	{
 		size = print_string(list);
-	}
-	else if (str[*i] == 'r')
+	}	
+	else if (str[*[i] == 'd' || str[*i] == 'i')
 	{
-		size = print_rev_string(list);
+		size = print_integer(list);
 	}
 	else
 	{
