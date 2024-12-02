@@ -3,14 +3,18 @@
 
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdio.h> /* added more libraries in order for most of the prototype functions can work */
+#include <string.h>
+#include <stdlib.h>
+#include <limits.h>
 
-/**
- * _printf - custom print function
- * @format: the format string containing the specifiers
- *
- * Return: the number of characters printed (excluding the null byte used to end output to strings)
- */
-
-int _printf(const char *format, ...)
+int _printf(const char *format, ...);
+int _putchar(char c);
+int handler(const char *str, va_list list);
+int percent_handler(const char *str, va_list list, int *i);
+int print_char(va_list args);
+int print_string(va_list args);
+int percent_handler(const char *str, va_list list, int *i);
+int print_rev_string(va_list list);
 
 #endif
