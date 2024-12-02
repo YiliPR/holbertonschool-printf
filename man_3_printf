@@ -84,7 +84,4 @@ Integer: 42
 .BR sprintf (3)
 
 .SH AUTHOR
-Your Name
-.SH COPYRIGHT
-Copyright (C) 2024. All rights reserved.
-
+Luis Feliciano, Eli Figueroa.
