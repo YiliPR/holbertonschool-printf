@@ -14,7 +14,6 @@ int handler(const char *str, va_list list);
 int percent_handler(const char *str, va_list list, int *i);
 int print_char(va_list args);
 int print_string(va_list args);
-int percent_handler(const char *str, va_list list, int *i);
 int print_rev_string(va_list list);
 
 #endif
