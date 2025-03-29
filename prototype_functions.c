@@ -38,3 +38,12 @@ int print_int(int num)
 	return (count);
 }
 
+/**
+ * print_percent - Handles the %% specifier in _printf
+ * Return: Number of characters printed (always 1)
+ */
+
+int print_percent(void)
+{
+	return _putchar('%');
+}
