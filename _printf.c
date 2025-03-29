@@ -26,19 +26,19 @@ int _printf(const char *format, ...)
 			if (format[i] == 'c')
 				count += print_char(va_arg(args, int));
 			else if (format[i] == 's')
-				count += print_strings(va_arg(args, char *));
+				count += print_string(va_arg(args, char *));
 			else if (format[i] == 'd' || format[i] == 'i')
-				count += print_number(va_arg(args, int));
+				count += print_int(va_arg(args, int));
 			else
 			{
-				count += ;
-				count += ;
+				count += _putchar('%');
+				count += _putchar(format[i]);
 			}
 		}
 		else
-			count +=
+			count += _putchar(format[i]);
 		i++;
 	}
-	va_end;
+	va_end(args);
 	return (count);
 }
