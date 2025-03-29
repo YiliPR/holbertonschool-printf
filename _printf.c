@@ -29,6 +29,10 @@ int _printf(const char *format, ...)
 				count += print_string(va_arg(args, char *));
 			else if (format[i] == 'd' || format[i] == 'i')
 				count += print_int(va_arg(args, int));
+			else if (format[i] == '%')
+				count += print_percent();
+			else if (format[i] == '\0')
+				return (-1);
 			else
 			{
 				count += _putchar('%');
