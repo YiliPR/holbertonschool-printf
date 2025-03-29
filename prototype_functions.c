@@ -1,25 +1,40 @@
-#include <unistd.h>
+#include "main.h"
 
-void print_number(int n)
+/**
+ * print_int - prints an integer o integers.
+ * @num: variable.
+ * Return: the number of character printed.
+ */
+
+int print_int(int num)
 {
-	char buffer[20];
-	int i = 0, temp;
+	int count = 0;
+	unsigned int n;
+	char buffer[12];
+	int i = 0;
 
-	if (n < 0)
+	if (num < 0)
 	{
-		write(1, "-", 1);
-		n = -n;
+		count += _putchar('-');
+		n = -num;
+	}
+	else
+	{
+		n = num;
 	}
 
-	temp = n;
 	do {
-		buffer[i++] = (temp % 10) + '0';
-		temp /= 10;
-	} while (temp > 0);
-
-	while (i-- > 0)
-	{
-		write(1, &buffer[i], 1);
+		buffer[i++] = (n % 10) + '0';
+		n /= 10;
 	}
+	while (n > 0)
+		;
+
+	while (i--)
+	{
+		count += _putchar(buffer[i]);
+	}
+
+	return (count);
 }
 
