@@ -1,47 +1,33 @@
-#include <stdarg.h>
-#include <unistd.h>
+#include "main.h"
 
 /**
- *print_char - custom function to print characters with a format
- *@c: charcter to print
- *Return: the number of characters printed
- */
-
-char print_char(char c);
+* print_char - prints a single character
+* @c: variable
+* Return: the character to print
+*/
+int print_char(char c)
 {
-	return (_putchar);
+    return (_putchar(c));
 }
+
 /**
- *print_strings - prints a string
- *@format: finds a pattern to a format
- *Return: the result of the number
- */
-char print_strings(char s)
+* print_string - prints a string
+* @str: pointer
+* Return: the number of character printed
+*/
+
+int print_string(char *str)
 {
-	int number = 0;
-	const char *ptr = format;
-	char ch;
+    int i = 0;
 
+    if (!str)
+        str = "(null)";
 
+    while (str[i])
+    {
+        _putchar(str[i]);
+        i++;
+    }
 
-	while ((ch = *ptr++) != '\0')
-	{
-		if (ch == '%' && *ptr == 's')
-		{
-
-
-			while (*str)
-			{
-				putchar(*str++);
-				number++;
-			}
-			ptr++;
-		}
-		else
-		{
-			putchar(ch);
-			number++;
-		}
-	}
-	return (number);
+    return (i);
 }
