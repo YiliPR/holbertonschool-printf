@@ -24,11 +24,11 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == 'c')
-				(va_arg(args, int));
+				count += print_char(va_arg(args, int));
 			else if (format[i] == 's')
-				(va_arg(args, char *));
+				count += print_strings(va_arg(args, char *));
 			else if (format[i] == 'd' || format[i] == 'i')
-				(va_arg(args, int));
+				count += print_number(va_arg(args, int));
 			else
 			{
 				count += ;
