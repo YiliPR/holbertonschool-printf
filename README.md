@@ -1,4 +1,4 @@
-# Custom Printf Project
+# Bryan,Eli and William Printf Project
 
 ## Project Description
 
@@ -18,26 +18,25 @@ To install and run this project, follow these steps:
 
 ### Prerequisites
 - A C compiler (e.g., GCC)
-- Make tool (for building)
 
 ### Installation Steps
 
 1. Clone the repository to your local machine:
     ```bash
-    git clone https://github.com/your-username/printf.git
-    cd printf
+    git clone https://github.com/YiliPR/holbertonschool-printf.git
+    cd holbertonschool-printf
     ```
 
-2. Compile the project using `make`:
+2. Compile the project using `gcc`:
     ```bash
-    make
+    GCC _printf.c prototype_functions.c proto_functions.c  _putchar.c -o printf
     ```
 
-3. This will generate an executable file (typically named `a.out` by default).
+3. This will generate an executable file (typically named `printf`).
 
 4. Run the executable:
     ```bash
-    ./a.out
+    ./printf
     ```
 
 ## How to Use the Project
@@ -57,5 +56,27 @@ int main() {
 
     return 0;
 }
+```
+## Supported Format Specifiers
 
+The following format specifiers are supported in this custom `_printf` function:
+
+- **`%c`**: Prints a single character.
+- **`%s`**: Prints a string.
+- **`%d`**: Prints an integer in decimal format.
+- **`%i`**: Prints an integer (same as `%d`).
+- **`%%`**: Prints a percent sign (`%`).
+
+---
+
+## Credits
+
+- This project was developed by [Bryan,Eli and William].  
+- The `_printf` function was created as part of a learning exercise to improve our understanding of variadic functions and low-level C programming.
+
+---
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0). You can view the full license details in the [LICENSE](LICENSE) file in this repository.
 
